@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Js script -->
+    <script src="script.js" defer></script>
+
+    <title>Lista de Tarefas</title>
+  </head>
+  <body>
+    <main class="window">
+      <div class="box-add">
+        <h1>Lista de Tarefas</h1>
+        <input
+          id="textInput"
+          type="text"
+          placeholder="Botar lixo para fora..."
+        />
+        <button id="btn" type="submit">Adicionar Tarefa</button>
+      </div>
+      <h2>Tarefas</h2>
+      <div id="box-tasks" class="box-tasks"></div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("./assets/background.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 550px;
+  height: 90%;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: rgba(84, 84, 105, 0.664);
+  overflow-y: auto;
+}
+
+.box-add {
+  padding: 15px 2rem;
+  margin: 20px 20px;
+  border-bottom: 3px solid #b2b2b2;
+}
+
+.box-add h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box-add input[type="text"] {
+  width: 250px;
+  height: 35px;
+  margin-right: 3px;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+.box-add button {
+  height: 35px;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+}
+
+.box-add button:hover {
+  background-color: #d8d6d6;
+}
+
+.box-tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.box-tasks h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.box-tasks .task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  background-color: #2e2c2c;
+  border-radius: 5px;
+}
+
+.task p {
+  word-break: break-all;
+  font-size: 20px;
+}
+
+.task .buttons button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.task .buttons button:hover {
+  background-color: white;
+  color: #2e2c2c;
+  border-radius: 50%;
+}
+
+.task .buttons i {
+  font-size: 20px;
+}
+
+.complete p {
+  text-decoration: line-through;
+}
