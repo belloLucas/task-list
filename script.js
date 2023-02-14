@@ -72,6 +72,8 @@ btnInput.addEventListener("click", () => {
   editBtn.addEventListener("click", () => {
     const newTaskValue = prompt("Digite aqui o que deseja alterar: ");
     const taskText = document.getElementById("pTask");
+    tasks.push(newTaskValue);
+    tasks.splice(pTask, 1);
     taskText.innerText = newTaskValue;
   });
 });
