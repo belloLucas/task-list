@@ -1,3 +1,6 @@
+"use strict";
+
+/* Getting the HTML elements */
 const boxTasks = document.getElementById("box-tasks");
 const btnInput = document.getElementById("btn");
 const textInput = document.getElementById("textInput");
@@ -38,7 +41,7 @@ btnInput.addEventListener("click", () => {
   }
 
   /* Checking if the task is duplicated */
-  for (i = 0; i < tasks.length; i++) {
+  for (let i = 0; i < tasks.length; i++) {
     if (textInput.value == tasks[i]) {
       alert(
         "Essa tarefa já existe, insira uma nova ou altere a que já existe!"
@@ -60,10 +63,9 @@ btnInput.addEventListener("click", () => {
   });
 
   /* Function to delete items */
-  const pTask = document.getElementById("pTask").value;
   const deleteBtn = document.getElementsByClassName("delete")[indexTask];
   deleteBtn.addEventListener("click", () => {
-    tasks.splice(pTask, 1);
+    tasks.splice(indexTask, 1);
     deleteBtn.parentNode.parentNode.remove();
   });
 
@@ -71,9 +73,9 @@ btnInput.addEventListener("click", () => {
   const editBtn = document.getElementsByClassName("edit")[indexTask];
   editBtn.addEventListener("click", () => {
     const newTaskValue = prompt("Digite aqui o que deseja alterar: ");
-    const taskText = document.getElementById("pTask");
-    tasks.push(newTaskValue);
-    tasks.splice(pTask, 1);
+    const taskEl = editBtn.parentNode.parentNode;
+    const taskText = taskEl.querySelector("#pTask");
+    tasks[indexTask] = newTaskValue;
     taskText.innerText = newTaskValue;
   });
 });
