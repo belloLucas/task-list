@@ -60,6 +60,12 @@ btnInput.addEventListener("click", () => {
   const completeBtn = document.getElementsByClassName("complete")[indexTask];
   completeBtn.addEventListener("click", () => {
     completeBtn.parentNode.parentNode.classList.add("complete");
+
+    //This if will delete the task that contains the "complete" class.
+    if (completeBtn.parentNode.parentNode.classList.contains("complete")) {
+      tasks.splice(indexTask, 1);
+      completeBtn.parentNode.parentNode.remove();
+    }
   });
 
   /* Function to delete items */
